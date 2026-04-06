@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description:
     "Manual tracking for income, expenses, and debt. No bank connections — just a clear picture of where you stand.",
   metadataBase: new URL("https://owenflow.com"),
+  alternates: {
+    canonical: "https://owenflow.com",
+  },
   openGraph: {
     title: "OwenFlow — Know where your money goes",
     description:

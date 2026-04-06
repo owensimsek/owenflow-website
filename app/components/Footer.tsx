@@ -30,6 +30,12 @@ export default function Footer() {
               >
                 Terms of Service
               </Link>
+              <a
+                href="mailto:support@owenflow.com"
+                className="text-sm text-white/40 hover:text-white/70 transition-colors"
+              >
+                Contact
+              </a>
             </div>
             <p className="text-xs text-white/20">
               © {new Date().getFullYear()} OwenFlow. All rights reserved.
