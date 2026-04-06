@@ -36,9 +36,9 @@ export default function ContactPage() {
 
           {/* Intro */}
           <p className="text-base text-slate-600 leading-relaxed mb-14">
-            If you have questions about OwenFlow, need support, or would like to
-            contact us regarding privacy, data, or account-related requests,
-            please reach out using the email below.
+            Questions, support requests, or privacy-related inquiries?
+            <br />
+            We&apos;d be happy to help.
           </p>
 
           <div className="space-y-10">
@@ -46,7 +46,7 @@ export default function ContactPage() {
             {/* Email */}
             <section>
               <h2 className="text-base font-semibold text-slate-900 mb-3">
-                Support Email
+                Email
               </h2>
               <a
                 href="mailto:support@owenflow.com"
@@ -70,27 +70,11 @@ export default function ContactPage() {
               </a>
             </section>
 
-            {/* Privacy / data requests */}
+            {/* Note */}
             <section>
-              <h2 className="text-base font-semibold text-slate-900 mb-3">
-                Privacy & Data Requests
-              </h2>
               <p className="text-sm text-slate-500 leading-relaxed">
-                For privacy-related or account deletion requests, please email{" "}
-                <a
-                  href="mailto:support@owenflow.com"
-                  className="text-navy hover:underline underline-offset-4"
-                >
-                  support@owenflow.com
-                </a>
-                . We will process your request in accordance with our{" "}
-                <a
-                  href="/privacy"
-                  className="text-navy hover:underline underline-offset-4"
-                >
-                  Privacy Policy
-                </a>
-                .
+                For privacy or account deletion requests, please include
+                relevant details in your email.
               </p>
             </section>
 
