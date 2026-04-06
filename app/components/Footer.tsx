@@ -9,7 +9,9 @@ export default function Footer() {
 
           {/* Left: Logo + tagline */}
           <div className="flex flex-col gap-1.5">
-            <Logo size="sm" inverted />
+            <Link href="/" aria-label="OwenFlow — go to homepage">
+              <Logo size="sm" inverted />
+            </Link>
             <p className="text-white/30 text-xs pl-[calc(28px+10px)]">
               Personal finance for the intentional.
             </p>
@@ -17,7 +19,13 @@ export default function Footer() {
 
           {/* Right: Links + copyright */}
           <div className="flex flex-col sm:items-end gap-2.5">
-            <div className="flex items-center gap-5">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              <Link
+                href="/"
+                className="text-sm text-white/40 hover:text-white/70 transition-colors"
+              >
+                Home
+              </Link>
               <Link
                 href="/privacy"
                 className="text-sm text-white/40 hover:text-white/70 transition-colors"
@@ -30,12 +38,12 @@ export default function Footer() {
               >
                 Terms of Service
               </Link>
-              <a
-                href="mailto:support@owenflow.com"
+              <Link
+                href="/contact"
                 className="text-sm text-white/40 hover:text-white/70 transition-colors"
               >
                 Contact
-              </a>
+              </Link>
             </div>
             <p className="text-xs text-white/20">
               © {new Date().getFullYear()} OwenFlow. All rights reserved.
