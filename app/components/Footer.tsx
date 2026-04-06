@@ -13,7 +13,7 @@ export default function Footer() {
               <Logo size="sm" inverted />
             </Link>
             <p className="text-white/30 text-xs pl-[calc(28px+10px)]">
-              Personal finance for the intentional.
+              Know where your money goes.
             </p>
           </div>
 

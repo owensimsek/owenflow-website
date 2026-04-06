@@ -45,10 +45,6 @@ export default function Hero() {
               <AppStoreButton href="#" size="lg" />
             </div>
 
-            {/* Social proof note */}
-            <p className="mt-5 text-sm text-slate-400">
-              Works offline · No account required to start
-            </p>
           </div>
 
           {/* Right: iPhone */}
