@@ -11,20 +11,21 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "OwenFlow — Know where your money goes",
   description:
-    "Track income, expenses, and debt in one simple, intentional flow. OwenFlow is a personal finance app built for clarity.",
+    "Manual tracking for income, expenses, and debt. No bank connections — just a clear picture of where you stand.",
   metadataBase: new URL("https://owenflow.com"),
   openGraph: {
     title: "OwenFlow — Know where your money goes",
     description:
-      "Track income, expenses, and debt in one simple, intentional flow.",
+      "Manual tracking for income, expenses, and debt. No bank connections — just a clear picture of where you stand.",
     type: "website",
     url: "https://owenflow.com",
+    siteName: "OwenFlow",
   },
   twitter: {
     card: "summary_large_image",
     title: "OwenFlow — Know where your money goes",
     description:
-      "Track income, expenses, and debt in one simple, intentional flow.",
+      "Manual tracking for income, expenses, and debt. No bank connections — just a clear picture of where you stand.",
   },
   icons: {
     icon: [

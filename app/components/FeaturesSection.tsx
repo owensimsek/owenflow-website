@@ -7,8 +7,7 @@ const features = [
     ),
     label: "Expenses",
     title: "Log every expense.",
-    body:
-      "Capture what you spend as it happens. Categories, notes, dates — everything you need to see where your money actually goes.",
+    body: "Capture what you spend as it happens. Add a category, a note, a date — and see exactly where your money goes.",
   },
   {
     icon: (
@@ -18,8 +17,7 @@ const features = [
     ),
     label: "Income",
     title: "Track what comes in.",
-    body:
-      "Record every income source — salary, freelance, side income. Know your total clearly, not just an approximation.",
+    body: "Record every source — salary, freelance, or anything else. Know your real total, not just a rough estimate.",
   },
   {
     icon: (
@@ -29,8 +27,7 @@ const features = [
     ),
     label: "Debt",
     title: "Stay aware of what you owe.",
-    body:
-      "Add loans, credit balances, or any obligation you carry. Seeing it clearly is the first step toward dealing with it.",
+    body: "Log every obligation — loans, balances, anything you carry. Seeing it clearly is the first step toward managing it.",
   },
   {
     icon: (
@@ -40,8 +37,7 @@ const features = [
     ),
     label: "OwenFlow Score",
     title: "Your financial clarity score.",
-    body:
-      "A single number that reflects how aware you are of your own finances. Updated with every entry. A simple, honest read on where you stand.",
+    body: "A single number that measures how well you know your finances. Updated with every entry you make.",
   },
 ];
 
@@ -51,7 +47,7 @@ export default function FeaturesSection() {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
-        <div className="max-w-xl mb-14">
+        <div className="max-w-lg mb-14">
           <p className="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-4">
             Features
           </p>
@@ -69,19 +65,15 @@ export default function FeaturesSection() {
               key={f.label}
               className="bg-white rounded-2xl border border-line p-8 hover:border-navy/20 transition-colors duration-200"
             >
-              {/* Icon */}
               <div className="w-10 h-10 rounded-xl bg-navy/[0.07] text-navy flex items-center justify-center mb-5">
                 {f.icon}
               </div>
-              {/* Label */}
               <p className="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-2">
                 {f.label}
               </p>
-              {/* Title */}
-              <h3 className="text-[1.1rem] font-semibold text-slate-900 leading-snug mb-3">
+              <h3 className="text-[1.05rem] font-semibold text-slate-900 leading-snug mb-2.5">
                 {f.title}
               </h3>
-              {/* Body */}
               <p className="text-sm text-slate-500 leading-relaxed">{f.body}</p>
             </div>
           ))}

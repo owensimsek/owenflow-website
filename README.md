@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OwenFlow — Marketing Website
 
-## Getting Started
+Marketing website for [owenflow.com](https://owenflow.com).
 
-First, run the development server:
+OwenFlow is a personal finance iOS app built around a simple idea: manually entering your income, expenses, and debt makes money feel real. No bank connections, no automatic syncing — just you and your numbers.
+
+---
+
+## Stack
+
+| | |
+|---|---|
+| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com) |
+| Language | TypeScript |
+| Font | [Geist](https://vercel.com/font) via `next/font` |
+| Deployment | [Vercel](https://vercel.com) |
+
+---
+
+## Local Setup
+
+**Prerequisites:** Node.js ≥ 18 (via [nvm](https://github.com/nvm-sh/nvm) or direct install)
 
 ```bash
+# Clone
+git clone git@github.com:owensimsek/owenflow-website.git
+cd owenflow-website
+
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Note (macOS + nvm):** If you see a Turbopack error about a missing `node` binary, run the dev server manually from a shell where nvm is loaded: `npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  components/          # All UI components
+    Navbar.tsx
+    Hero.tsx
+    PhilosophySection.tsx
+    FeaturesSection.tsx
+    PreviewSection.tsx
+    CTASection.tsx
+    Footer.tsx
+    Logo.tsx
+    AppStoreButton.tsx
+    IPhoneMockup.tsx
+    LegalLayout.tsx
+  privacy/page.tsx     # /privacy route
+  terms/page.tsx       # /terms route
+  opengraph-image.tsx  # Auto-generated OG image (1200×630)
+  favicon.ico          # Browser favicon
+  globals.css          # Design tokens + Tailwind config
+  layout.tsx           # Root layout + metadata
+  page.tsx             # Home page (/)
+public/
+  icon.svg             # Brand icon (SVG)
+  favicon-16x16.png
+  favicon-32x32.png
+  apple-touch-icon.png
+assets/
+  favicon/             # Source favicon files
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The site deploys automatically to Vercel on every push to `main`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To deploy manually:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build   # Verify the build locally first
+vercel --prod   # Deploy to production
+```
+
+**Environment variables:** None required. The site is fully static.
+
+**Domain:** Point `owenflow.com` to Vercel in your DNS settings.
+
+---
+
+## Making Changes
+
+- **Copy / content** — edit the relevant component in `app/components/`
+- **App Store link** — replace `href="#"` in `AppStoreButton.tsx` calls across the page once the link is live
+- **Legal pages** — update placeholder text in `app/privacy/page.tsx` and `app/terms/page.tsx`
+- **OG image** — edit `app/opengraph-image.tsx`
