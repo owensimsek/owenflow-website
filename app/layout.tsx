@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     description:
       "Track income, expenses, and debt in one simple, intentional flow.",
   },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
