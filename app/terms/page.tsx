@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import LegalLayout from "../components/LegalLayout";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service — OwenFlow",
@@ -8,44 +9,156 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout
-      title="Terms of Service"
-      lastUpdated="April 2025"
-      intro="By downloading or using OwenFlow, you agree to these terms. Please read them carefully. They are written to be clear and fair."
-      sections={[
-        {
-          title: "Use of the App",
-          body: "OwenFlow is a personal finance tracking tool intended for individual, non-commercial use. You may use the app to record your own financial information. You may not use it for illegal purposes or in any way that violates applicable laws.",
-        },
-        {
-          title: "Your Data",
-          body: "You retain full ownership of the data you enter into OwenFlow. Because your data is stored locally on your device, you are responsible for maintaining backups. We are not liable for data loss resulting from device failure, accidental deletion, or other circumstances beyond our control.",
-        },
-        {
-          title: "Account Responsibility",
-          body: "If you create an account, you are responsible for maintaining the confidentiality of your credentials and for all activity under your account. Notify us immediately at hello@owenflow.com if you suspect unauthorised access.",
-        },
-        {
-          title: "Intellectual Property",
-          body: "The OwenFlow app, name, logo, and all related materials are the intellectual property of OwenFlow. You may not copy, modify, distribute, or reverse engineer any part of the app without explicit written permission.",
-        },
-        {
-          title: "Disclaimer of Warranties",
-          body: "OwenFlow is provided 'as is' without warranties of any kind. We do not guarantee that the app will be error-free, uninterrupted, or suitable for any particular purpose. OwenFlow is not a financial advisor. Nothing in the app constitutes financial advice.",
-        },
-        {
-          title: "Limitation of Liability",
-          body: "To the maximum extent permitted by law, OwenFlow and its creators shall not be liable for any indirect, incidental, or consequential damages arising from your use of the app, including any financial decisions made based on app data.",
-        },
-        {
-          title: "Changes to These Terms",
-          body: "We may update these terms from time to time. We will notify you of material changes through the app or via email. Continued use of the app after changes constitutes acceptance of the updated terms.",
-        },
-        {
-          title: "Governing Law",
-          body: "These terms are governed by applicable law. Any disputes will be resolved in the jurisdiction where OwenFlow is registered.",
-        },
-      ]}
-    />
+    <>
+      <Navbar />
+      <main className="bg-warm min-h-screen pt-[60px]">
+
+        {/* Page header */}
+        <div className="border-b border-line bg-white">
+          <div className="max-w-2xl mx-auto px-6 py-16">
+            <p className="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-3">
+              Legal
+            </p>
+            <h1 className="text-3xl font-semibold text-slate-900 tracking-tight">
+              Terms of Service
+            </h1>
+            <p className="mt-2 text-sm text-slate-400">Last updated: April 6, 2026</p>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="max-w-2xl mx-auto px-6 py-16">
+
+          {/* Intro */}
+          <p className="text-base text-slate-600 leading-relaxed mb-14">
+            By using OwenFlow, you agree to these Terms of Service.
+          </p>
+
+          <div className="space-y-12">
+
+            {/* 1 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                1. Use of the Service
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed mb-3">
+                OwenFlow is a personal finance tracking tool intended for
+                informational and organizational purposes only.
+              </p>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                You agree to use the app in compliance with all applicable laws.
+              </p>
+            </section>
+
+            {/* 2 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                2. No Financial Advice
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed mb-3">
+                <span className="font-semibold text-slate-700">
+                  OwenFlow does not provide financial, investment, tax, or legal advice.
+                </span>
+              </p>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                All information provided by the app is for informational purposes
+                only and should not be relied upon as professional advice.
+              </p>
+            </section>
+
+            {/* 3 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                3. User Data
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed mb-3">
+                You are responsible for the accuracy of the data you enter.
+              </p>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                We are not responsible for decisions made based on your data or
+                insights generated by the app.
+              </p>
+            </section>
+
+            {/* 4 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                4. Account Responsibility
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                You are responsible for maintaining the confidentiality of your
+                account and login credentials.
+              </p>
+            </section>
+
+            {/* 5 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                5. Limitation of Liability
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed mb-4">
+                To the fullest extent permitted by law, OwenFlow shall not be
+                liable for:
+              </p>
+              <ul className="space-y-1.5 pl-4 mb-4">
+                {[
+                  "Financial losses",
+                  "Data inaccuracies",
+                  "Any indirect or consequential damages",
+                ].map((item) => (
+                  <li key={item} className="text-sm text-slate-500 leading-relaxed flex gap-2">
+                    <span className="text-slate-300 mt-[3px]">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Use the app at your own risk.
+              </p>
+            </section>
+
+            {/* 6 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                6. Termination
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                We reserve the right to suspend or terminate your access if you
+                violate these Terms.
+              </p>
+            </section>
+
+            {/* 7 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                7. Changes to Terms
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                We may update these Terms at any time. Continued use of the app
+                constitutes acceptance of the updated Terms.
+              </p>
+            </section>
+
+            {/* 8 */}
+            <section>
+              <h2 className="text-base font-semibold text-slate-900 mb-4">
+                8. Contact
+              </h2>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                For questions, contact:{" "}
+                <a
+                  href="mailto:support@owenflow.com"
+                  className="text-navy hover:underline"
+                >
+                  support@owenflow.com
+                </a>
+              </p>
+            </section>
+
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
