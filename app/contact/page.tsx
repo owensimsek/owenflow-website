@@ -35,7 +35,7 @@ export default function ContactPage() {
         <div className="max-w-2xl mx-auto px-6 py-16">
 
           {/* Intro */}
-          <p className="text-base text-slate-600 leading-relaxed mb-14">
+          <p className="text-base text-slate-600 leading-relaxed mb-10">
             Questions, support requests, or privacy-related inquiries?
             <br />
             We&apos;d be happy to help.
@@ -46,7 +46,7 @@ export default function ContactPage() {
             {/* Email */}
             <section>
               <h2 className="text-base font-semibold text-slate-900 mb-3">
-                Email
+                Support
               </h2>
               <a
                 href="mailto:support@owenflow.com"
