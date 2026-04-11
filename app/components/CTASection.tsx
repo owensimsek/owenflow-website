@@ -29,7 +29,7 @@ export default function CTASection() {
         </p>
 
         <div className="mt-9 flex justify-center">
-          <AppStoreButton href="#" size="lg" theme="light" />
+          <AppStoreButton href="#" size="lg" theme="light" location="cta" />
         </div>
 
         <p className="mt-5 text-sm text-white/25">

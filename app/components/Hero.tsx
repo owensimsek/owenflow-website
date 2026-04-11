@@ -42,7 +42,7 @@ export default function Hero() {
 
             {/* CTA */}
             <div className="mt-8">
-              <AppStoreButton href="#" size="lg" />
+              <AppStoreButton href="#" size="lg" location="hero" />
             </div>
 
           </div>

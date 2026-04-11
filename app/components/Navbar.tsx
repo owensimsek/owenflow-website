@@ -9,7 +9,7 @@ export default function Navbar() {
         <Link href="/" aria-label="OwenFlow — go to homepage">
           <Logo size="sm" />
         </Link>
-        <AppStoreButton size="sm" />
+        <AppStoreButton size="sm" location="navbar" />
       </div>
     </header>
   );

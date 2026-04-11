@@ -1,13 +1,20 @@
+"use client";
+
+import { logEvent } from "firebase/analytics";
+import { initAnalytics } from "../lib/firebase";
+
 interface AppStoreButtonProps {
   href?: string;
   size?: "sm" | "default" | "lg";
   theme?: "dark" | "light";
+  location?: string;
 }
 
 export default function AppStoreButton({
   href = "#",
   size = "default",
   theme = "dark",
+  location = "unknown",
 }: AppStoreButtonProps) {
   const isDark = theme === "dark";
 
@@ -17,9 +24,17 @@ export default function AppStoreButton({
   const labelSize = { sm: "text-[10px]", default: "text-[10px]", lg: "text-xs" }[size];
   const nameSize = { sm: "text-xs", default: "text-[13px]", lg: "text-sm" }[size];
 
+  async function handleClick() {
+    const analytics = await initAnalytics();
+    if (analytics) {
+      logEvent(analytics, "app_store_click", { location });
+    }
+  }
+
   return (
     <a
       href={href}
+      onClick={handleClick}
       className={`inline-flex items-center ${padding} ${gap} rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm select-none ${
         isDark
           ? "bg-navy text-white hover:bg-navy-deep"
